@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(253, 254, 255);
+}
+
+.loader{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 16px solid rgb(233, 182, 241);
+    border-top: 16px solid #4d076b;
+    animation:spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+p{
+    font-family: cursive;
+    font-size: large;
+}
