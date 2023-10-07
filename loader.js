@@ -14,6 +14,12 @@ export class PageLoader extends HTMLElement{
          loader.style.border= "16px solid rgb(233, 182, 241)";
          loader.style.borderTop= "16px solid #4d076b";
          loader.style.animation="spin 2s linear infinite";
+         let rotation = 0; 
+         function rotateElement() {
+         rotation += 1; 
+         loader.style.transform = `rotate(${rotation}deg)`; 
+         }
+         const intervalId = setInterval(rotateElement, 10);
         
            eventBus.subscribe('click', () => {
              if(loader.style.display==="none"){
