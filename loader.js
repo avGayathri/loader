@@ -24,9 +24,12 @@ export class PageLoader extends HTMLElement{
            eventBus.subscribe('click', () => {
              if(loader.style.display==="none"){
                 loader.style.display="block";
+                alert("please wait! your page is being loaded");
         
              }else{
                 loader.style.display="none";
+                alert("page loaded");
+                
              }
             
           });
